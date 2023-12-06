@@ -54,7 +54,7 @@ void AMyActor::Tick(float DeltaTime)
 	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
 
 	// Z（高さを設定）
-	NewLocation.Z += DeltaHeight * 20.0f;
+	NewLocation.Z += DeltaHeight * FloatSpeedMove;
 
 	// アクタの位置へ設定
 	SetActorLocation(NewLocation);

@@ -21,6 +21,9 @@ public:
 
 	virtual void OnConstruction(const FTransform& transform) override;
 
+	UPROPERTY(EditAnyWhere, BlueprintReadWrite, Category = "FloatingProperty")
+	float FloatSpeedMove = 20.0f;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -28,5 +31,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+private:
+	
 };
